@@ -1,0 +1,23 @@
+﻿@model Category
+@section heading
+{
+    Categories
+}
+@section heading2
+{
+    Categories
+}
+@section title
+{
+    Create
+}
+<form asp-area="Admin" asp-controller="Categories" asp-action="Create">
+    <div class="mb-3">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" id="name" placeholder="Enter Name">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-1">
+        <button type="submit" class="btn btn-outline-primary">Create</button>
+    </div>
+</form>

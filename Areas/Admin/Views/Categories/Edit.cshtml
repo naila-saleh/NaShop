@@ -1,0 +1,35 @@
+﻿@model Category
+@section heading
+{
+    Categories
+}
+@section heading2
+{
+    Categories
+}
+@section title
+{
+    Edit
+}
+@section style
+{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+}
+<form asp-area="Admin" asp-controller="Categories" asp-action="Edit" asp-route-id="@Model.Id">
+    <div class="mb-3">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" id="name" placeholder="Enter Name">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-1">
+        <button type="submit" class="btn btn-outline-primary">Update</button>
+    </div>
+</form>
+@section script
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    @if (TempData["success"] is not null)
+    { 
+        <script>toastr.success('@TempData["success"]')</script>
+    }
+}

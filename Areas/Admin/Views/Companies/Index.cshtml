@@ -1,0 +1,48 @@
+﻿@model List<Company>
+
+@section heading
+{
+    Companies
+}
+@section heading2
+{
+    Companies
+}
+@section title
+{
+    All
+}
+@section style
+{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+}
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th style="width: 10px">#</th>
+        <th>Title</th>
+        <th style="width: 20%">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr class="align-middle">
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td style="width: 20%">
+                <a onclick="return confirm('Are you sure you want to delete?')" type="button" class="btn btn-outline-danger mb-2" href="/Admin/Companies/Delete/@item.Id">Delete</a>
+                <a type="button" class="btn btn-outline-secondary mb-2" href="/Admin/Companies/Edit/@item.Id">Edit</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+@section script
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    @if (TempData["success"] is not null)
+    { 
+        <script>toastr.success('@TempData["success"]')</script>
+    }
+}
