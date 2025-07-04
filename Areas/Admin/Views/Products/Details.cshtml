@@ -1,0 +1,41 @@
+﻿@model Product
+
+@section heading
+{
+    Products
+}
+@section heading2
+{
+    Products
+}
+@section title
+{
+    Details
+}
+<div>
+    <p>Name: @Model.Name</p>
+    <p>Description: @Model.Description</p>
+    <p>Price: @Model.Price</p>
+    <p>Rate: @Model.Rate</p>
+    <p>Quantity: @Model.Quantity</p>
+    <p>Discount: @Model.Discount</p>
+    <p>Image:<br/> <img src="/images/@Model.Image" width="300px"/></p>
+    @foreach (var item in ViewBag.Categories)
+    {
+        if (item.Id != Model.CategoryId)
+        {
+            continue;
+        }
+
+        <p>Category: @item.Name</p>
+    }
+    @foreach (var item in ViewBag.Companies)
+    {
+        if (item.Id != Model.CompanyId)
+        {
+            continue;
+        }
+
+        <p>Company: @item.Name</p>
+    }
+</div>

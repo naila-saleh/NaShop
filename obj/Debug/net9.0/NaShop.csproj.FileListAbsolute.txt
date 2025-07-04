@@ -239,3 +239,4 @@ D:\Users\hp\Asp\NaShop\NaShop\obj\Debug\net9.0\compressed\n9zrf1y1lg-s5dfy8cuvy.
 D:\Users\hp\Asp\NaShop\NaShop\obj\Debug\net9.0\compressed\zdutbtyt80-ddky5r22iq.gz
 D:\Users\hp\Asp\NaShop\NaShop\obj\Debug\net9.0\compressed\lz3gns1qj3-sc6ou6m5p0.gz
 D:\Users\hp\Asp\NaShop\NaShop\obj\Debug\net9.0\compressed\hi0v94g60o-3xv8oehij3.gz
+D:\Users\hp\Asp\NaShop\NaShop\obj\Debug\net9.0\NaShop.sourcelink.json

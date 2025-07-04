@@ -52,6 +52,13 @@ public class CompaniesController : Controller
     }
 
     [HttpGet]
+    public IActionResult Details(int id)
+    {
+        var company = _context.Companies.Find(id);
+        return View(company);
+    }
+
+    [HttpGet]
     public IActionResult Delete(int id)
     {
         var company = _context.Companies.Find(id);

@@ -69,6 +69,15 @@ public class ProductsController : Controller
         TempData["success"] = "Product Edited Successfully";
         return RedirectToAction("Index");
     }
+
+    [HttpGet]
+    public IActionResult Details(int id)
+    {
+        ViewBag.Categories = _context.Categories.ToList();
+        ViewBag.Companies = _context.Companies.ToList();
+        var product = _context.Products.Find(id);
+        return View(product);
+    }
     
     [HttpGet]
     public IActionResult Delete(int id)
